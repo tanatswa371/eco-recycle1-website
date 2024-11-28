@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .metrics, .profile-edit {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>User Profile</h1>
+        
+        <div class="metrics">
+            <h2>Recycling Tracker</h2>
+            <p><strong>Weight of waste recycled:</strong> <span id="recycledWeight">50 kg</span></p>
+            <p><strong>Total recycling sessions:</strong> <span id="recyclingSessions">10</span></p>
+        </div>
+
+        <div class="badges">
+            <h2>Achievements</h2>
+            <div class="badge">Recycling Champion</div>
+            <div class="badge">Eco Warrior</div>
+        </div>
+
+        <div class="profile-edit">
+            <h2>Edit Profile</h2>
+            <form id="profileForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Profile updated successfully!');
+            // Here you would typically handle the form submission to your server
+        });
+    </script>
+
+</body>
+</html>
+
+
